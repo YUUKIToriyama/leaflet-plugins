@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo | Leaflet.MousePosition.ts</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.mouseposition.ts@0.1.2/dist/bundle.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+	<div id="my_map" style="width: 500px; height: 500px;"></div>
+	<script src="main.js"></script>
+	<pre class="prettyprint"><code id="code"></code></pre>
+	<script>
+		fetch("./main.js").then(result => {
+			return result.text();
+		}).then(text => {
+			document.getElementById("code").innerText = text;
+		})
+	</script>
+</body>
+
+</html>
